@@ -57,13 +57,13 @@ public class Tenant {
     private LocalDateTime updatedAt;
 
     public Tenant(
-            UUID id,
+            
             String tenantCode,
             String name,
             String email,
             String phone
     ) {
-        this.id = id;
+        
         this.tenantCode = tenantCode;
         this.name = name;
         this.email = email;
