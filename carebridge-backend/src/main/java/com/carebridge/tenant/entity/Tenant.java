@@ -16,7 +16,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-//import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Entity
@@ -38,11 +37,11 @@ public class Tenant {
         length = 50
     )
     private String tenantCode;
-    @Column(nullable = false,length = -150)
+    @Column(nullable = false, length = 150)
     private String name;
-    @Column(nullable = false,length=150)
+    @Column(nullable = false, length = 150)
     private String email;
-    @Column(nullable = false,length = 20)
+    @Column(length = 20)
     private String phone;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false,length = 30)
