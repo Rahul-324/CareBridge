@@ -17,13 +17,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
+import org.springframework.security.access.prepost.PreAuthorize;
+
 @RestController
 @RequestMapping("/api/v1/onboarding")
 @RequiredArgsConstructor
 public class OnboardingController {
 
     private final OnboardingService onboardingService;
+
     @PostMapping("/clinic")
+    @PreAuthorize("hasAnyRole('BOOTSTRAP', 'SYSTEM_ADMIN')")
     public ResponseEntity<ApiResponse<OnboardingResponse>> onboardClinic( @Valid @RequestBody OnboardingRequest request){
         OnboardingResponse onboardingResponse= onboardingService.onboardClinic(request);
 
