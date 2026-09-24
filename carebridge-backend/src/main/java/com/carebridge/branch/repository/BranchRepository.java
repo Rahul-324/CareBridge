@@ -32,4 +32,6 @@ public interface BranchRepository extends JpaRepository<Branch,UUID>{
             String branchCode
     );
 
+    Optional<Branch> findByIdAndTenant_Id(UUID id, UUID tenantId);
+
 }

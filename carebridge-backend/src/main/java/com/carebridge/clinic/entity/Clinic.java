@@ -37,7 +37,7 @@ public class Clinic {
         name = "tenant_id",
         nullable = false,
         unique = true,
-        foreignKey = @ForeignKey(name ="fk_clinics_tenents")
+        foreignKey = @ForeignKey(name = "fk_clinics_tenant")
     )
     private Tenant tenant;
     @Column(
