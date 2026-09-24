@@ -7,6 +7,17 @@ spring:
 
   jpa:
     show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 900000
+  refresh-expiration: 604800000
+
+onboarding:
+  registration-key: ${ONBOARDING_REGISTRATION_KEY:local-onboarding-key}
 
 management:
   endpoint:
